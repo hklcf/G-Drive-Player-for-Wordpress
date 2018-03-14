@@ -51,9 +51,9 @@ function gdp_setting_function() {
 
 function gdp_video_func( $atts, $link = '' ) {
 	$gdp_player_option = get_option( 'gdp_player_option' );
-  $links = explode(',', $link);
-  $link_nodes = count($links);
-  $link_node = rand(0, $link_nodes-1);
+	$links = explode(',', $link);
+	$link_nodes = count($links);
+	$link_node = rand(0, $link_nodes-1);
 	$thumbnail = $gdp_player_option['thumbnail'] === '1' ? get_the_post_thumbnail_url('','full') : '';
 	$atts = shortcode_atts(
 		array(
