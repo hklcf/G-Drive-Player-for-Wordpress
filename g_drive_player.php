@@ -27,14 +27,14 @@ function add_gdp_menu() {
 	add_settings_field( 'gdp_player_id', 'Player ID', 'gdp_player_id_function', $option_group, $setting_section );
 	function gdp_player_id_function() {
 		$gdp_player_option = get_option( 'gdp_player_option' );
-		echo '<input class="regular-text"  name="gdp_player_option[id]" type="text" value="'.$gdp_player_option['id'].'" placeholder="player">';
+		echo '<input class="regular-text" name="gdp_player_option[id]" type="text" value="'.$gdp_player_option['id'].'" placeholder="player">';
 	}
 
 	add_settings_field( 'gdp_player_size', 'Player Size', 'gdp_player_size_function', $option_group, $setting_section );
 	function gdp_player_size_function() {
 		$gdp_player_option = get_option( 'gdp_player_option' );
-		echo '<label>Height</label><input class="small-text"  name="gdp_player_option[height]" type="text" value="'.$gdp_player_option['height'].'" placeholder="100%">';
-		echo '<label>Width</label><input class="small-text"  name="gdp_player_option[width]" type="text" value="'.$gdp_player_option['width'].'" placeholder="100%">';
+		echo '<label for="gdp_player_option[height]">Height </label><input class="small-text" id="gdp_player_option[height]" name="gdp_player_option[height]" type="text" value="'.$gdp_player_option['height'].'" placeholder="100%">';
+		echo '<label for="gdp_player_option[width]"> Width </label><input class="small-text" id="gdp_player_option[width]" name="gdp_player_option[width]" type="text" value="'.$gdp_player_option['width'].'" placeholder="100%">';
 	}
 }
 add_action( 'admin_menu', 'add_gdp_menu' );
